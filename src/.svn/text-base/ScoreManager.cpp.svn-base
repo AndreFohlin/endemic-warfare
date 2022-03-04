@@ -1,0 +1,17 @@
+#include "ScoreManager.h"
+
+
+
+ScoreManager::ScoreManager()
+{
+
+}
+
+void ScoreManager::AddScore(int score, ScoreType type)
+{
+	if(type == GOLD)
+	{
+		m_PlayerScore += score;
+	}
+
+}

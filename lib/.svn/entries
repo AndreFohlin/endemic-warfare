@@ -1,0 +1,73 @@
+8
+
+dir
+111
+svn://getost/repos/VikingGame/lib
+svn://getost/repos/VikingGame
+
+
+
+2007-12-09T15:53:34.687154Z
+95
+Space
+
+
+svn:special svn:externals svn:needs-lock
+
+
+
+
+
+
+
+
+
+
+
+08260133-6340-0410-a14f-9db9081cac73
+
+fmodvc.lib
+file
+
+
+
+
+2007-12-09T15:05:42.113064Z
+397d16b07518be2b49d7bbc0018741f3
+2007-12-09T15:53:34.687154Z
+95
+Space
+has-props
+
+dynamic
+dir
+
+SDL_ttf.lib
+file
+
+
+
+
+2007-07-21T09:16:28.000000Z
+7e795d0117bc1a718a31ca587399870b
+2007-12-07T14:08:35.848040Z
+58
+Fohlin
+has-props
+
+static
+dir
+
+SDL.lib
+file
+
+
+
+
+2007-12-05T12:46:16.672476Z
+6bf7b8fec94e53ddcd24d2447ea7a89d
+2007-12-05T14:03:26.937871Z
+38
+Space
+has-props
+

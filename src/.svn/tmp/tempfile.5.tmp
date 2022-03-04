@@ -1,0 +1,71 @@
+#include "Animation.h"
+
+AnimationManager::AnimationManager(void)
+{
+	m_frames = 0;
+	m_activeframe = 0;
+	m_time = 0;
+
+}
+
+AnimationManager::~AnimationManager(void)
+{
+}
+
+void AnimationManager::SetSpriteMap(SDL_Surface* map)
+{
+	//m_Surface = map;
+}
+
+
+void AnimationManager::ChangeAnimation(char* name)
+{
+	m_activeAnimation = name;
+	m_Surface = m_animations[m_activeAnimation].m_surface;
+
+	m_Rect.x = Sint16(m_animations[m_activeAnimation].startx);
+	m_Rect.y = Sint16(m_animations[m_activeAnimation].starty);
+	m_Rect.w = Sint16(m_animations[m_activeAnimation].width);
+	m_Rect.h = Sint16(m_animations[m_activeAnimation].height);
+	m_frames = int(m_animations[m_activeAnimation].nframes);
+	m_Rect2 = m_Rect;
+}
+
+void AnimationManager::AddAnimation(Animation a ,char* name)
+{
+	m_animations[name] = a;
+	m_activeAnimation = name;
+	
+}
+
+void AnimationManager::Update(float dtime, float x, float y)
+{
+	
+<<<<<<< .mine
+	m_Rect2.x = x;//x - m_animations[m_activeAnimation].offsetx;
+	m_Rect2.y = y;//y - m_animations[m_activeAnimation].offsety;
+=======
+	m_Rect2.x = Sint16(x - m_animations[m_activeAnimation].offsetx);
+	m_Rect2.y = Sint16(y - m_animations[m_activeAnimation].offsety);
+>>>>>>> .r111
+	m_time += dtime;
+	if(m_time >= 0.5f)
+	{
+		//If the time is right so go one frame forward
+		m_time = 0.0f;
+		m_activeframe++;
+		if(m_activeframe >= m_frames)
+		{
+			m_activeframe = 0;
+		}
+	}
+}
+
+void AnimationManager::Render()
+{
+	
+	Animation a = m_animations[m_activeAnimation];
+	m_Rect.x = Sint16(a.width* m_activeframe);
+	
+	SDL_BlitSurface(m_Surface,&m_Rect, RenderWindow::Instance()->GetRenderWindow(), &m_Rect2);
+}

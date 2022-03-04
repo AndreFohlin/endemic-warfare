@@ -1,0 +1,40 @@
+8
+
+dir
+111
+svn://getost/repos/VikingGame/data
+svn://getost/repos/VikingGame
+
+
+
+2007-12-09T22:09:51.663379Z
+109
+Space
+
+
+svn:special svn:externals svn:needs-lock
+
+
+
+
+
+
+
+
+
+
+
+08260133-6340-0410-a14f-9db9081cac73
+
+XML
+dir
+
+graphics
+dir
+
+font
+dir
+
+sound
+dir
+

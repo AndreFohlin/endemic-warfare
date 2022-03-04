@@ -1,0 +1,13 @@
+<?xml version="1.0" ?>
+<ROOT>
+	<Item path = "../data/graphics/mead.bmp" tilex = "10" tiley = "5" type = "0"/>
+	<Item path = "../data/graphics/bomb.bmp" tilex = "40" tiley = "20" type = "1"/>
+	<Item path = "../data/graphics/girl.bmp" tilex = "22" tiley = "20" type = "2"/>
+	<Item path = "../data/graphics/gold.bmp" tilex = "10" tiley = "16" type = "3"/>
+	<Item path = "../data/graphics/gold.bmp" tilex = "10" tiley = "16" type = "3"/>
+	<Item path = "../data/graphics/gold.bmp" tilex = "10" tiley = "16" type = "3"/>
+	<Item path = "../data/graphics/gold.bmp" tilex = "10" tiley = "16" type = "3"/>
+	<Item path = "../data/graphics/gold.bmp" tilex = "10" tiley = "16" type = "3"/>
+	<Item path = "../data/graphics/gold.bmp" tilex = "10" tiley = "16" type = "3"/>
+	<Item path = "../data/graphics/gold.bmp" tilex = "10" tiley = "16" type = "3"/>
+</ROOT>

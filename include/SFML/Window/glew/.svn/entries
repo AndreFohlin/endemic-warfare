@@ -1,0 +1,40 @@
+8
+
+dir
+111
+svn://getost/repos/VikingGame/include/SFML/Window/glew
+svn://getost/repos/VikingGame
+
+
+
+2007-12-03T15:18:11.815659Z
+2
+Henrik
+
+
+svn:special svn:externals svn:needs-lock
+
+
+
+
+
+
+
+
+
+
+
+08260133-6340-0410-a14f-9db9081cac73
+
+glew.h
+file
+
+
+
+
+2007-12-05T10:15:10.677780Z
+d5d7715c33d5a023c7b6d2a4d197aa4b
+2007-12-03T15:18:11.815659Z
+2
+Henrik
+

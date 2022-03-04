@@ -1,0 +1,7 @@
+<?xml version="1.0" ?>
+<ROOT>
+	<Level 	map="" 	tileX="" tileY=""	/>
+	<Player image="" startX="" startY=""	/>
+	<Item 	itemsXML=""	/>
+	<Enemy 	enemiesXML=""	/>
+</ROOT>

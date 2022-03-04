@@ -1,0 +1,70 @@
+#pragma once
+#include "TileType.h"
+#include "GameObject.h"
+
+class Tile : public GameObject
+{
+public:
+	Tile(void);
+	~Tile(void);
+	
+	virtual void		Init();
+	virtual void		CleanUp();
+
+	virtual void		Update();
+	virtual void		Render();
+
+	bool	GetWalkable() {return m_walkable;}
+	void	SetWalkable(bool isWalkable);
+	
+	int		GetXIndex();	
+	int		GetYIndex();
+
+	TileTypes		GetType()		{return m_type;}
+	TileTypes		GetOldType()	{return m_oldType;}
+
+	void	SetType(TileTypes type);
+
+	void	SetLife(float life)			{m_life = life;}
+	void	DecreaseLife(float decLife); 
+
+	void	SetDestroyAble(bool destroyable)	{m_destroyAble = destroyable;}
+
+	const bool	GetDestroyAble()	{return m_destroyAble;}
+	const float	GetLife()			{return m_life;}
+	
+	void	SetIndex(int x, int y)	{m_indexX = x; m_indexY = y;}
+
+//	int GetXpos() {return  int(m_Sprite.GetLeft());}
+//	int GetYpos() {return int(m_Sprite.GetTop());}
+
+	void ExplodeTo(TileTypes type);
+
+	sf::IntRect	GetRect();	
+
+	const float GetPressureDMG()			{return m_pressureDamage;}
+	void		SetPressureDMG(float dmg)	{m_pressureDamage = dmg;}
+
+	const float GetWalkSpeed()					{return m_walkSpeed;}
+	void		SetWalkSpeed(float walkSpeed)	{m_walkSpeed = walkSpeed;}
+
+protected:
+
+	unsigned int		m_TileID;
+
+	TileTypes	m_type;
+	TileTypes	m_oldType;
+
+	bool m_walkable;
+	bool m_destroyAble;
+
+	float m_walkSpeed;
+	float m_pressureDamage;
+
+	int m_indexX, m_indexY;
+
+	float m_life;
+
+private:
+	
+};

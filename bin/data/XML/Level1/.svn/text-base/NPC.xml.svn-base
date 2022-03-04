@@ -1,0 +1,11 @@
+<?xml version="1.0" ?>
+<ROOT>
+	<NPC type = "DIGGER"/>
+	<NPC type = "DIGGER"/>
+	<NPC type = "GRUNT"/>
+	<NPC type = "GRUNT"/>
+	<NPC type = "HUNTER"/>
+	<NPC type = "HUNTER"/>
+	<NPC type = "HUNTER"/>
+	<NPC type = "HUNTER"/>
+</ROOT>

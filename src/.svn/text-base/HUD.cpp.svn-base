@@ -1,0 +1,117 @@
+#include "HUD.h"	
+#include "Player.h"
+
+#define FM FontManager::Instance()
+
+HUD::HUD(void)
+{
+	m_timeIsUp = false;
+}
+
+HUD::~HUD(void)
+{
+}
+
+void HUD::Init(float x, float y)
+{
+	//TimerSettings
+	m_Clock.Reset();
+	m_minutes = 4;
+	m_seconds = 0;
+
+	//Text.SetFont("../data/font/arial.ttf");
+	FM->Init();
+	FM->LoadFont("../data/font/arial.ttf" ,20, "arial");
+	FM->LoadFont("../data/font/arial.ttf" ,20, "goth1");
+	FM->LoadFont("../data/font/arial.ttf" ,40, "goth2");
+	
+	//Init graphics
+	m_back.Init();
+	m_back.SetSprite("../data/graphics/HUD.bmp");
+	m_back.SetY(y);
+	m_back.SetX(x);
+	
+	m_VikingPic.Init();
+	m_VikingPic.SetSprite("../data/graphics/vikingshow.bmp");
+	m_VikingPic.SetX(x + 20);
+	m_VikingPic.SetY(y + 20);
+
+	m_BombPic.Init();
+	m_BombPic.SetSprite("../data/graphics/bombshow.bmp");
+	m_BombPic.SetX(x + 220);
+	m_BombPic.SetY(y + 20);
+
+	m_GirlPic.Init();
+	m_GirlPic.SetSprite("../data/graphics/girlshow.bmp");
+	m_GirlPic.SetX(x + 420);
+	m_GirlPic.SetY(y + 20);
+
+	
+}
+
+void HUD::Render(Player* player)
+{
+	m_back.Render();
+	m_VikingPic.Render();
+	//m_BombPic.Render();
+	m_GirlPic.Render();
+
+
+	
+	//Convert the timevariables to chars
+	char buf1[10];
+	char buf2[10];
+	//Bombs
+	char buf3[10];
+
+	//The timetext
+	FM->AddText("goth1", "Time Left",800,660);
+	itoa(m_minutes,buf1,10);
+	FM->AddText("goth1", buf1,910,660);
+	FM->AddText("goth1", ":",925,660);
+	itoa(m_seconds,buf2,10);
+	FM->AddText("goth1", buf2,935,660);
+	
+
+	//The Scoretext
+	//FM->AddText("arial", "Bombs Left:",800,690);
+	int bombs = player->GetNrOfBombs();
+	itoa(bombs, buf3,10);
+	FM->AddText("goth2", buf3,178,690);
+
+
+	//The itemtext
+
+
+	//FM->SetColor(255,0,0,255);
+	FM->Render();
+}
+
+void HUD::Update()
+{
+	
+	//When updating the time will decrease
+	float delta = m_Clock.GetElapsedTime();
+	
+	m_seconds -= delta;
+	
+	//If seconds is under 0. a minute has passed
+	if(m_seconds < 0.0f)
+	{
+		//if no minutes left. times up!
+		if(m_minutes <= 0)
+		{
+			m_timeIsUp = true;
+		}
+		else
+		{
+			m_minutes--;
+			m_seconds = 60;
+		}
+	}
+
+	//Reset the timer to be able to get a new delta time next update
+	m_Clock.Reset();
+
+	int bombs = Player::Instance()->GetNrOfBombs();
+}

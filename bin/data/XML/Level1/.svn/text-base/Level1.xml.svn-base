@@ -1,0 +1,7 @@
+<?xml version="1.0" ?>
+<ROOT>
+	<Level 	map="../data/graphics/test2.bmp" tileX="16" tileY="16" />
+	<Player image="../data/graphics/Viking.bmp" startX="32" startY="20" />
+	<Item 	itemsXML="../data/XML/Level1/Items.xml" />
+	<NPC 	npcXML="../data/XML/Level1/NPC.xml" />
+</ROOT>

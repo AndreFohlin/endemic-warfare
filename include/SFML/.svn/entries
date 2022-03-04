@@ -1,0 +1,115 @@
+8
+
+dir
+111
+svn://getost/repos/VikingGame/include/SFML
+svn://getost/repos/VikingGame
+
+
+
+2007-12-03T15:18:11.815659Z
+2
+Henrik
+
+
+svn:special svn:externals svn:needs-lock
+
+
+
+
+
+
+
+
+
+
+
+08260133-6340-0410-a14f-9db9081cac73
+
+Network.hpp
+file
+
+
+
+
+2007-12-05T10:15:10.978542Z
+a1ccb1eb440e20ef122c34501e49e65a
+2007-12-03T15:18:11.815659Z
+2
+Henrik
+
+Graphics
+dir
+
+Audio
+dir
+
+System
+dir
+
+Graphics.hpp
+file
+
+
+
+
+2007-12-05T10:15:10.982448Z
+94b46a5b517634ee54307e5b30f4d3d7
+2007-12-03T15:18:11.815659Z
+2
+Henrik
+
+Window
+dir
+
+Audio.hpp
+file
+
+
+
+
+2007-12-05T10:15:10.986354Z
+d74d14f51986bc0beb723f677fb27edb
+2007-12-03T15:18:11.815659Z
+2
+Henrik
+
+Network
+dir
+
+System.hpp
+file
+
+
+
+
+2007-12-05T10:15:10.991237Z
+a327edfe1bee3a1e87b23e9cca106c4e
+2007-12-03T15:18:11.815659Z
+2
+Henrik
+
+Config.hpp
+file
+
+
+
+
+2007-12-05T10:15:10.995143Z
+4ee5bc158a2618f9cfcfbee0644532c2
+2007-12-03T15:18:11.815659Z
+2
+Henrik
+
+Window.hpp
+file
+
+
+
+
+2007-12-05T10:15:10.999049Z
+300ffa79e514d0502f67ab22a65dfc64
+2007-12-03T15:18:11.815659Z
+2
+Henrik
+
